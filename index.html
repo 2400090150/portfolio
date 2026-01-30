@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupesh Ravu | Graphic Designer & Visual Storyteller</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, #0a0e27 0%, #1a0a2e 25%, #16213e 50%, #0f3460 75%, #0a0e27 100%); color: white; overflow-x: hidden; position: relative; min-height: 100vh; }
+        
+        /* Creative background elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 0%, rgba(255, 214, 10, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+            animation: gradientShift 20s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Diagonal accent shapes */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(45deg, rgba(255, 0, 110, 0.03) 0%, transparent 30%),
+                linear-gradient(225deg, rgba(0, 245, 255, 0.03) 0%, transparent 30%),
+                linear-gradient(135deg, rgba(255, 214, 10, 0.02) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Animated accent bars */
+        .bg-accent-bar {
+            position: fixed;
+            background: linear-gradient(90deg, rgba(255, 0, 110, 0.1), rgba(0, 245, 255, 0.1));
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-accent-1 {
+            top: 10%;
+            left: -10%;
+            width: 60%;
+            height: 8px;
+            transform: skewX(-20deg);
+            animation: slideAccent 8s ease-in-out infinite;
+        }
+
+        .bg-accent-2 {
+            top: 30%;
+            right: -15%;
+            width: 50%;
+            height: 6px;
+            transform: skewX(20deg);
+            animation: slideAccent 10s ease-in-out infinite 2s;
+        }
+
+        .bg-accent-3 {
+            bottom: 20%;
+            left: -20%;
+            width: 70%;
+            height: 7px;
+            transform: skewX(-20deg);
+            animation: slideAccent 12s ease-in-out infinite 4s;
+        }
+
+        /* Animated decorative elements */
+        .floating-shape {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .capsule {
+            border: 2px solid;
+            border-radius: 50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .plus {
+            font-size: 24px;
+            font-weight: 300;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        /* Capsule variations */
+        .capsule-1 {
+            width: 80px;
+            height: 35px;
+            border-color: rgba(255, 255, 255, 0.6);
+            top: 10%;
+            left: 5%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .capsule-2 {
+            width: 100px;
+            height: 40px;
+            border-color: rgba(255, 140, 30, 0.6);
+            top: 20%;
+            right: 8%;
+            animation: float 8s ease-in-out infinite 1s;
+        }
+
+        .capsule-3 {
+            width: 90px;
+            height: 38px;
+            border-color: rgba(150, 100, 50, 0.6);
+            top: 35%;
+            left: 12%;
+            animation: float 9s ease-in-out infinite 2s;
+        }
+
+        .capsule-4 {
+            width: 110px;
+            height: 42px;
+            border-color: rgba(255, 255, 255, 0.5);
+            top: 50%;
+            right: 15%;
+            animation: float 7.5s ease-in-out infinite 1.5s;
+        }
+
+        .capsule-5 {
+            width: 85px;
+            height: 36px;
+            border-color: rgba(200, 120, 60, 0.6);
+            bottom: 25%;
+            left: 8%;
+            animation: float 8.5s ease-in-out infinite 2.5s;
+        }
+
+        .capsule-6 {
+            width: 95px;
+            height: 40px;
+            border-color: rgba(150, 100, 50, 0.5);
+            bottom: 15%;
+            right: 10%;
+            animation: float 7s ease-in-out infinite 3s;
+        }
+
+        .capsule-7 {
+            width: 75px;
+            height: 32px;
+            border-color: rgba(255, 140, 30, 0.5);
+            top: 60%;
+            left: 25%;
+            animation: float 9s ease-in-out infinite 1s;
+        }
+
+        .capsule-8 {
+            width: 120px;
+            height: 45px;
+            border-color: rgba(255, 255, 255, 0.4);
+            bottom: 30%;
+            right: 25%;
+            animation: float 8s ease-in-out infinite 2s;
+        }
+
+        /* Plus sign variations */
+        .plus-1 {
+            color: rgba(255, 140, 30, 0.7);
+            top: 15%;
+            right: 20%;
+            animation: float 10s ease-in-out infinite 1s;
+        }
+
+        .plus-2 {
+            color: rgba(150, 100, 50, 0.6);
+            top: 40%;
+            left: 30%;
+            animation: float 11s ease-in-out infinite 2s;
+        }
+
+        .plus-3 {
+            color: rgba(255, 140, 30, 0.5);
+            bottom: 35%;
+            left: 15%;
+            animation: float 9s ease-in-out infinite 3s;
+        }
+
+        .plus-4 {
+            color: rgba(150, 100, 50, 0.7);
+            top: 75%;
+            right: 5%;
+            animation: float 12s ease-in-out infinite 1.5s;
+        }
+
+        .plus-5 {
+            color: rgba(255, 140, 30, 0.4);
+            bottom: 10%;
+            left: 40%;
+            animation: float 10s ease-in-out infinite 2.5s;
+        }
+
+        .plus-6 {
+            color: rgba(150, 100, 50, 0.5);
+            top: 55%;
+            right: 30%;
+            animation: float 11s ease-in-out infinite 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px); 
+                opacity: 0.3;
+            }
+            50% { 
+                transform: translateY(-30px) translateX(15px); 
+                opacity: 0.6;
+            }
+        }
+
+        /* Main content wrapper */
+        main, section, footer {
+            position: relative;
+            z-index: 1;
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); transition: 0.4s; }
+        .glass:hover { background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(0, 210, 255, 0.5); transform: translateY(-6px) scale(1.02); }
+        
+        /* Enhanced blur for About and Skills sections */
+        #about-content .glass {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            background: rgba(15, 20, 40, 0.15);
+        }
+        
+        #about-content > div.glass {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            background: rgba(15, 20, 40, 0.2);
+        }
+        
+        #about-content .grid .glass {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            background: rgba(15, 20, 40, 0.18);
+        }
+
+        /* Enhanced glass cards for contact section */
+        #contact-content .glass {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            background: rgba(15, 20, 40, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 1px 1px rgba(255, 255, 255, 0.2);
+        }
+
+        #contact-content .grid .glass {
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            background: rgba(15, 20, 40, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Blur background when contact section is visible */
+        body:has(#contact-content:not(.hidden-section)) {
+            filter: blur(0px);
+        }
+
+        body:has(#contact-content:not(.hidden-section))::before,
+        body:has(#contact-content:not(.hidden-section))::after {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+
+        #contact-content:not(.hidden-section) {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Blur background when about section is visible */
+        body:has(#about-content:not(.hidden-section)) {
+            filter: blur(0px);
+        }
+
+        body:has(#about-content:not(.hidden-section))::before,
+        body:has(#about-content:not(.hidden-section))::after {
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+        }
+
+        #about-content:not(.hidden-section) {
+            position: relative;
+            z-index: 10;
+        }
+        .gradient-text { background: linear-gradient(120deg, #00d2ff, #7f5cff, #ff6ec4); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientMove 6s linear infinite; }
+        @keyframes gradientMove { 0% { background-position: 0% center; } 50% { background-position: 100% center; } 100% { background-position: 0% center; } }
+        
+        /* Enhanced heading animation */
+        h1 span.gradient-text {
+            display: inline-block;
+        }
+
+        h1:hover span.gradient-text {
+            animation: none;
+        }
+        .timeline-dot { height: 12px; width: 12px; background: #00d2ff; border-radius: 50%; box-shadow: 0 0 10px #00d2ff; }
+        .float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-20px);} }
+        
+        /* Logo/Skill badge styling */
+        .float {
+            background: rgba(10, 15, 26, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+        }
+        
+        .float:hover {
+            background: rgba(10, 15, 26, 0.9);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        /* Enhanced skill badges */
+        .skill-badge {
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .skill-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .skill-badge:hover::before {
+            left: 100%;
+        }
+
+        .skill-badge:hover {
+            background: rgba(10, 15, 26, 0.95);
+            box-shadow: 0 0 25px currentColor, inset 0 0 25px rgba(255, 255, 255, 0.1);
+            transform: scale(1.1) translateZ(0);
+        }
+
+        /* Skill title animation for About section */
+        #about-content .glass h5 {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        #about-content .glass h5::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        #about-content .glass h5:hover::before {
+            left: 100%;
+        }
+
+        #about-content .glass h5:hover {
+            text-shadow: 0 0 25px currentColor, inset 0 0 25px rgba(255, 255, 255, 0.1);
+            transform: scale(1.1) translateZ(0);
+        }
+        
+        /* Creative Button Animations */
+        /* Creative Button Animations */
+        .hero-btn-primary {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #06b6d4, #a855f7, #ec4899);
+            background-size: 300% 300%;
+            animation: gradientShift-btn 6s ease infinite;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        
+        .hero-btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: slideLight 3s infinite;
+        }
+        
+        .hero-btn-primary::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .hero-btn-primary:hover {
+            transform: scale(1.12) translateY(-5px) !important;
+            letter-spacing: 1px;
+        }
+        
+        .hero-btn-primary:hover::after {
+            opacity: 1;
+        }
+        
+        @keyframes gradientShift-btn {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes slideLight {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: -100%; }
+        }
+        
+        .hero-btn-secondary {
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+        }
+        
+        .hero-btn-secondary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .hero-btn-secondary::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(168, 85, 247, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .hero-btn-secondary:hover {
+            border-color: #a855f7;
+            color: #c084fc;
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.5), inset 0 0 15px rgba(6, 182, 212, 0.1);
+            transform: translateY(-3px) scale(1.08) !important;
+        }
+        
+        .hero-btn-secondary:hover::after {
+            opacity: 1;
+        }
+        
+        .hero-btn-secondary:hover::before {
+            left: 100%;
+        }
+        
+        /* New helper classes */
+        .hidden-section { display: none; }
+        .fade-in { animation: fadeIn 0.8s ease-in forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Design frames for inserting project images */
+        .design-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; perspective: 1000px; }
+        @media (min-width: 768px) { .design-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .design-grid { grid-template-columns: repeat(3, 1fr); } }
+        
+        /* Center the last 2 frames side by side */
+        @media (min-width: 1024px) {
+            .design-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            .design-frame:nth-child(1),
+            .design-frame:nth-child(2),
+            .design-frame:nth-child(3),
+            .design-frame:nth-child(4),
+            .design-frame:nth-child(5),
+            .design-frame:nth-child(6),
+            .design-frame:nth-child(7),
+            .design-frame:nth-child(8),
+            .design-frame:nth-child(9) {
+                width: calc(33.333% - 1rem);
+            }
+            .design-frame:nth-child(10),
+            .design-frame:nth-child(11) {
+                width: calc(33.333% - 1rem);
+            }
+        }
+        
+        .design-frame { border-radius: 1rem; overflow: hidden; min-height: 300px; display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(255,255,255,0.04); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02); position: relative; animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+        .design-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1); }
+        .design-placeholder { color: #9ca3af; font-size: 0.95rem; }
+
+        /* Staggered entrance animation */
+        .design-frame:nth-child(1) { animation-delay: 0.1s; }
+        .design-frame:nth-child(2) { animation-delay: 0.2s; }
+        .design-frame:nth-child(3) { animation-delay: 0.3s; }
+        .design-frame:nth-child(4) { animation-delay: 0.4s; }
+        .design-frame:nth-child(5) { animation-delay: 0.5s; }
+        .design-frame:nth-child(6) { animation-delay: 0.6s; }
+        .design-frame:nth-child(7) { animation-delay: 0.7s; }
+        .design-frame:nth-child(8) { animation-delay: 0.8s; }
+        .design-frame:nth-child(9) { animation-delay: 0.9s; }
+        .design-frame:nth-child(10) { animation-delay: 1s; }
+        .design-frame:nth-child(11) { animation-delay: 1.1s; }
+
+        @keyframes slideInUp { 
+            from { 
+                opacity: 0; 
+                transform: translateY(60px) rotateX(-20deg); 
+            } 
+            to { 
+                opacity: 1; 
+                transform: translateY(0) rotateX(0); 
+            } 
+        }
+
+        /* Frame variations with enhanced animations */
+        .design-frame { transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1); }
+        
+        /* Style 1: Neon Border Glow with Image Zoom */
+        .design-frame:nth-child(1) { border: 2px solid rgba(0, 210, 255, 0.3); box-shadow: 0 0 20px rgba(0, 210, 255, 0.2), inset 0 0 20px rgba(0, 210, 255, 0.05); animation: floatFrame 4s ease-in-out infinite; }
+        .design-frame:nth-child(1):hover img { transform: scale(1.1) rotate(2deg); }
+        .design-frame:nth-child(1):hover { border-color: rgba(0, 210, 255, 0.8); box-shadow: 0 0 40px rgba(0, 210, 255, 0.6), inset 0 0 20px rgba(0, 210, 255, 0.1), 0 0 60px rgba(0, 210, 255, 0.4); transform: scale(1.05) translateY(-10px); }
+        
+        /* Style 2: Purple Gradient with Tilt */
+        .design-frame:nth-child(2) { border: 2px solid rgba(159, 92, 255, 0.4); background: linear-gradient(135deg, rgba(159, 92, 255, 0.05), rgba(255, 110, 196, 0.05)); animation: floatFrame 4.5s ease-in-out infinite 0.3s; }
+        .design-frame:nth-child(2):hover img { transform: scale(1.08) rotate(-1.5deg); }
+        .design-frame:nth-child(2):hover { border-color: rgba(159, 92, 255, 0.8); background: linear-gradient(135deg, rgba(159, 92, 255, 0.15), rgba(255, 110, 196, 0.15)); transform: translateY(-12px) rotateX(8deg) rotateZ(2deg); }
+        
+        /* Style 3: Solid Neon with Pulse */
+        .design-frame:nth-child(3) { border: 2px solid rgba(255, 110, 196, 0.4); box-shadow: 0 0 15px rgba(255, 110, 196, 0.2), inset 0 0 15px rgba(255, 110, 196, 0.05); animation: pulseBorder 2.5s ease-in-out infinite; }
+        .design-frame:nth-child(3):hover img { transform: scale(1.12) rotate(1deg); }
+        .design-frame:nth-child(3):hover { border-color: rgba(255, 110, 196, 0.8); box-shadow: 0 0 30px rgba(255, 110, 196, 0.6), inset 0 0 20px rgba(255, 110, 196, 0.1); animation: none; }
+        
+        @keyframes pulseBorder {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 110, 196, 0.2), inset 0 0 15px rgba(255, 110, 196, 0.05); }
+            50% { box-shadow: 0 0 35px rgba(255, 110, 196, 0.5), inset 0 0 20px rgba(255, 110, 196, 0.15); }
+        }
+        
+        /* Style 4: Cyan Glow with Lift and Zoom */
+        .design-frame:nth-child(4) { border: 1px solid rgba(0, 210, 255, 0.3); box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.4), 0 4px 15px rgba(0, 210, 255, 0.15); animation: floatFrame 5s ease-in-out infinite 0.6s; }
+        .design-frame:nth-child(4):hover img { transform: scale(1.15); }
+        .design-frame:nth-child(4):hover { box-shadow: 0 0 30px rgba(0, 210, 255, 0.5), 0 15px 35px rgba(0, 210, 255, 0.25); transform: translateY(-18px) scale(1.04); }
+        
+        /* Style 5: Pink Shimmer with Rotation */
+        .design-frame:nth-child(5) { border: 2px solid rgba(255, 110, 196, 0.3); animation: shimmerGlow 3s ease-in-out infinite; }
+        .design-frame:nth-child(5):hover img { transform: scale(1.09) rotate(-2deg); }
+        .design-frame:nth-child(5):hover { animation: shimmerGlow 0.8s ease-in-out infinite; border-color: rgba(255, 110, 196, 0.8); }
+        
+        @keyframes shimmerGlow { 
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 110, 196, 0.2); } 
+            50% { box-shadow: 0 0 40px rgba(255, 110, 196, 0.6); } 
+        }
+        
+        /* Style 6: Double Border with Spin Effect */
+        .design-frame:nth-child(6) { border: 2px solid rgba(0, 210, 255, 0.4); box-shadow: 0 0 0 1px rgba(159, 92, 255, 0.2), inset 0 0 0 1px rgba(159, 92, 255, 0.1); animation: floatFrame 4.2s ease-in-out infinite 0.9s; }
+        .design-frame:nth-child(6):hover img { transform: scale(1.11) rotate(3deg); }
+        .design-frame:nth-child(6):hover { border-color: rgba(0, 210, 255, 0.8); box-shadow: 0 0 0 3px rgba(159, 92, 255, 0.6), inset 0 0 20px rgba(0, 210, 255, 0.1), 0 0 40px rgba(0, 210, 255, 0.3); }
+        
+        /* Style 7: Lifted Frame with Scale */
+        .design-frame:nth-child(7) { border: 2px solid rgba(159, 92, 255, 0.3); box-shadow: 0 8px 20px rgba(159, 92, 255, 0.2); animation: gentleFloat 3.8s ease-in-out infinite; }
+        .design-frame:nth-child(7):hover img { transform: scale(1.13); }
+        .design-frame:nth-child(7):hover { box-shadow: 0 15px 45px rgba(159, 92, 255, 0.5); transform: scale(1.05); }
+        
+        /* Style 8: Pulse Glow with Zoom */
+        .design-frame:nth-child(8) { border: 1px solid rgba(255, 110, 196, 0.4); animation: pulseGlowFrame 2s ease-in-out infinite; }
+        .design-frame:nth-child(8):hover img { transform: scale(1.1) rotate(-1deg); }
+        .design-frame:nth-child(8):hover { animation: pulseGlowFrame 0.6s ease-in-out infinite; }
+        
+        @keyframes pulseGlowFrame { 
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 110, 196, 0.3); } 
+            50% { box-shadow: 0 0 35px rgba(255, 110, 196, 0.7); } 
+        }
+        
+        /* Style 9: Gradient Shift with Smooth Animation */
+        .design-frame:nth-child(9) { border: 2px solid transparent; background: linear-gradient(rgba(10, 15, 26, 0.9), rgba(10, 15, 26, 0.9)) padding-box, linear-gradient(135deg, rgba(0, 210, 255, 0.4), rgba(159, 92, 255, 0.4), rgba(255, 110, 196, 0.4)) border-box; animation: floatFrame 4.7s ease-in-out infinite 0.2s; }
+        .design-frame:nth-child(9):hover img { transform: scale(1.14) rotate(2.5deg); }
+        .design-frame:nth-child(9):hover { background: linear-gradient(rgba(10, 15, 26, 0.9), rgba(10, 15, 26, 0.9)) padding-box, linear-gradient(225deg, rgba(0, 210, 255, 0.8), rgba(159, 92, 255, 0.8), rgba(255, 110, 196, 0.8)) border-box; transform: scale(1.06) rotateY(5deg); }
+
+        /* Additional frames (10, 11) */
+        .design-frame:nth-child(10) { border: 2px solid rgba(0, 210, 255, 0.4); animation: floatFrame 4.5s ease-in-out infinite 0.4s; }
+        .design-frame:nth-child(10):hover img { transform: scale(1.12) rotate(-2deg); }
+        .design-frame:nth-child(10):hover { border-color: rgba(0, 210, 255, 0.8); transform: translateY(-15px) scale(1.04); }
+
+        .design-frame:nth-child(11) { border: 2px solid rgba(255, 110, 196, 0.4); animation: floatFrame 5s ease-in-out infinite 0.5s; }
+        .design-frame:nth-child(11):hover img { transform: scale(1.11) rotate(1.5deg); }
+        .design-frame:nth-child(11):hover { border-color: rgba(255, 110, 196, 0.8); transform: translateY(-16px) scale(1.05); }
+
+        /* Floating animations */
+        @keyframes floatFrame {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* Neon glowing boxes */
+        .neon-box {
+            position: absolute;
+            border: 2px solid;
+            pointer-events: none;
+            animation: pulseNeon 2s ease-in-out infinite;
+        }
+
+        .neon-box-1 {
+            width: 120px;
+            height: 100px;
+            border-color: rgba(255, 0, 110, 0.8);
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.6), inset 0 0 20px rgba(255, 0, 110, 0.2);
+            top: 15%;
+            right: 15%;
+        }
+
+        .neon-box-2 {
+            width: 100px;
+            height: 120px;
+            border-color: rgba(0, 245, 255, 0.8);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.6), inset 0 0 20px rgba(0, 245, 255, 0.2);
+            bottom: 25%;
+            left: 12%;
+        }
+
+        .neon-box-3 {
+            width: 140px;
+            height: 90px;
+            border-color: rgba(255, 214, 10, 0.8);
+            box-shadow: 0 0 20px rgba(255, 214, 10, 0.6), inset 0 0 20px rgba(255, 214, 10, 0.2);
+            top: 50%;
+            right: 8%;
+        }
+
+        .neon-box-4 {
+            width: 110px;
+            height: 110px;
+            border-color: rgba(181, 55, 242, 0.8);
+            box-shadow: 0 0 20px rgba(181, 55, 242, 0.6), inset 0 0 20px rgba(181, 55, 242, 0.2);
+            bottom: 15%;
+            right: 18%;
+        }
+
+        @keyframes pulseNeon {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 0, 110, 0.6), inset 0 0 20px rgba(255, 0, 110, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 0, 110, 0.9), inset 0 0 30px rgba(255, 0, 110, 0.4);
+            }
+        }
+
+        .neon-box-2 {
+            animation: pulseNeon2 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseNeon2 {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(0, 245, 255, 0.6), inset 0 0 20px rgba(0, 245, 255, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(0, 245, 255, 0.9), inset 0 0 30px rgba(0, 245, 255, 0.4);
+            }
+        }
+
+        .neon-box-3 {
+            animation: pulseNeon3 2s ease-in-out infinite 0.5s;
+        }
+
+        @keyframes pulseNeon3 {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(255, 214, 10, 0.6), inset 0 0 20px rgba(255, 214, 10, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(255, 214, 10, 0.9), inset 0 0 30px rgba(255, 214, 10, 0.4);
+            }
+        }
+
+        .neon-box-4 {
+            animation: pulseNeon4 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes pulseNeon4 {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(181, 55, 242, 0.6), inset 0 0 20px rgba(181, 55, 242, 0.2);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(181, 55, 242, 0.9), inset 0 0 30px rgba(181, 55, 242, 0.4);
+            }
+        }
+
+        /* Enhanced name styling */
+        .name-section {
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Orbital design element */
+        .orbital-element {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            animation: orbit 20s linear infinite;
+        }
+
+        .orbital-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(255, 0, 110, 0.3);
+            border-radius: 50%;
+            animation: rotatePlanet 8s linear infinite;
+        }
+
+        .planet {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 0, 110, 0.8), rgba(255, 0, 110, 0.3));
+            border-radius: 50%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+        }
+
+        @keyframes orbit {
+            0% { transform: translate(-50%, -50%) rotateZ(0deg); }
+            100% { transform: translate(-50%, -50%) rotateZ(360deg); }
+        }
+
+        @keyframes rotatePlanet {
+            0% { transform: rotateZ(0deg); }
+            100% { transform: rotateZ(-360deg); }
+        }
+
+        /* Sparkle effects */
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            z-index: 8;
+            animation: sparkleFloat 3s ease-in-out infinite;
+        }
+
+        .sparkle::before,
+        .sparkle::after {
+            content: '';
+            position: absolute;
+            background: white;
+        }
+
+        .sparkle::before {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: -4px;
+            transform: translateY(-50%);
+        }
+
+        .sparkle::after {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: -4px;
+            transform: translateX(-50%);
+        }
+
+        .sparkle-1 {
+            top: 5%;
+            right: 25%;
+            animation: sparkleFloat 2.5s ease-in-out infinite 0s;
+        }
+
+        .sparkle-2 {
+            top: 15%;
+            right: 15%;
+            animation: sparkleFloat 3s ease-in-out infinite 0.5s;
+        }
+
+        .sparkle-3 {
+            bottom: 20%;
+            left: 25%;
+            animation: sparkleFloat 2.8s ease-in-out infinite 1s;
+        }
+
+        @keyframes sparkleFloat {
+            0%, 100% { 
+                opacity: 0.3;
+                transform: translateY(0) scale(1);
+            }
+            50% { 
+                opacity: 1;
+                transform: translateY(-20px) scale(1.2);
+            }
+        }
+
+        /* Curved wave background element */
+        .wave-element {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -50px;
+            right: -100px;
+            z-index: 4;
+            opacity: 0.1;
+            pointer-events: none;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><path d="M0,200 Q100,100 200,200 T400,200" stroke="%23ff006e" stroke-width="3" fill="none"/></svg>');
+            animation: waveFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes waveFloat {
+            0%, 100% { transform: translateY(0) rotateZ(0deg); }
+            50% { transform: translateY(20px) rotateZ(5deg); }
+        }
+
+        /* Large background logos */
+        .logo-backdrop {
+            position: fixed;
+            font-weight: 900;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+        }
+
+        .logo-ps {
+            width: 500px;
+            height: 500px;
+            font-size: 280px;
+            color: #2563eb;
+            top: -100px;
+            left: -150px;
+            text-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+        }
+
+        .logo-ai {
+            width: 450px;
+            height: 450px;
+            font-size: 260px;
+            color: #f59e0b;
+            bottom: -80px;
+            right: -120px;
+            text-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+        }
+
+        .logo-ps-2 {
+            width: 380px;
+            height: 380px;
+            font-size: 220px;
+            color: #2563eb;
+            top: 40%;
+            right: -100px;
+            opacity: 0.05;
+            text-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+        }
+
+        .logo-ai-2 {
+            width: 420px;
+            height: 420px;
+            font-size: 240px;
+            color: #f59e0b;
+            bottom: 5%;
+            left: -120px;
+            opacity: 0.06;
+            text-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Subtle animation for logos */
+        .logo-backdrop {
+            animation: logoFloat 15s ease-in-out infinite;
+        }
+
+        .logo-ps-2 {
+            animation: logoFloat 18s ease-in-out infinite 2s;
+        }
+
+        .logo-ai-2 {
+            animation: logoFloat 20s ease-in-out infinite 4s;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { 
+                transform: translateY(0) rotateZ(0deg);
+                opacity: 0.08;
+            }
+            50% { 
+                transform: translateY(40px) rotateZ(2deg);
+                opacity: 0.12;
+            }
+        }
+    </style>
+</head>
+<body class="p-6 md:p-16">
+
+    <!-- Background accent elements -->
+    <div class="bg-accent-bar bg-accent-1"></div>
+    <div class="bg-accent-bar bg-accent-2"></div>
+    <div class="bg-accent-bar bg-accent-3"></div>
+
+    <!-- Floating decorative shapes -->
+    <div class="floating-shape capsule capsule-1"></div>
+    <div class="floating-shape capsule capsule-2"></div>
+    <div class="floating-shape capsule capsule-3"></div>
+    <div class="floating-shape capsule capsule-4"></div>
+    <div class="floating-shape capsule capsule-5"></div>
+    <div class="floating-shape capsule capsule-6"></div>
+    <div class="floating-shape capsule capsule-7"></div>
+    <div class="floating-shape capsule capsule-8"></div>
+
+    <div class="floating-shape plus plus-1">+</div>
+    <div class="floating-shape plus plus-2">+</div>
+    <div class="floating-shape plus plus-3">+</div>
+    <div class="floating-shape plus plus-4">+</div>
+    <div class="floating-shape plus plus-5">+</div>
+    <div class="floating-shape plus plus-6">+</div>
+
+    <!-- Large background logos -->
+    <div class="logo-backdrop logo-ps">Ps</div>
+    <div class="logo-backdrop logo-ai">Ai</div>
+    <div class="logo-backdrop logo-ps-2">Ps</div>
+    <div class="logo-backdrop logo-ai-2">Ai</div>
+
+    <nav class="flex justify-between items-center mb-20">
+        <div class="text-xl font-bold tracking-widest text-gray-400 cursor-pointer group" onclick="showHome()">
+            <span class="group-hover:text-cyan-400 transition-colors duration-300">Based in INDIA</span>
+        </div>
+        <div class="hidden md:flex gap-6 text-sm uppercase tracking-widest ml-auto pr-8">
+            <a href="#" onclick="showHome()" class="relative group px-4 py-2 text-white hover:text-cyan-400 transition-colors duration-300">
+                Home
+                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showWork()" class="relative group px-4 py-2 text-white hover:text-purple-400 transition-colors duration-300">
+                About
+                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showAbout()" class="relative group px-4 py-2 text-white hover:text-pink-400 transition-colors duration-300">
+                Work
+                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-400 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showCertifications()" class="relative group px-4 py-2 text-white hover:text-orange-400 transition-colors duration-300">
+                Certifications
+                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-400 group-hover:w-full transition-all duration-300"></div>
+            </a>
+            
+            <a href="javascript:void(0)" onclick="showContact()" class="relative group px-4 py-2 text-white hover:text-yellow-400 transition-colors duration-300">
+                Contact
+                <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></div>
+            </a>
+        </div>
+        <div class="flex items-center gap-4">
+            <!-- Back button (Mobile only, hidden on home) -->
+            <button class="md:hidden text-white text-2xl hidden" id="back-btn" onclick="showHome(); toggleMobileMenu()" title="Go back">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="md:hidden text-white text-2xl" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mb-8">
+        <div class="glass p-4 rounded-xl space-y-3 animate-slide-down">
+            <a href="#" onclick="showHome(); toggleMobileMenu()" class="block text-white hover:text-cyan-400 transition py-2 px-4">Home</a>
+            <a href="javascript:void(0)" onclick="showWork(); toggleMobileMenu()" class="block text-white hover:text-purple-400 transition py-2 px-4">About</a>
+            <a href="javascript:void(0)" onclick="showAbout(); toggleMobileMenu()" class="block text-white hover:text-pink-400 transition py-2 px-4">Work</a>
+            <a href="javascript:void(0)" onclick="showCertifications(); toggleMobileMenu()" class="block text-white hover:text-orange-400 transition py-2 px-4">Certifications</a>
+            <a href="javascript:void(0)" onclick="showContact(); toggleMobileMenu()" class="block text-white hover:text-yellow-400 transition py-2 px-4">Contact</a>
+        </div>
+    </div>
+
+    <main id="home-content">
+        <header class="relative min-h-[80vh] flex flex-col justify-center items-center text-center mb-32 overflow-hidden">
+            <!-- Orbital design element -->
+            <div class="orbital-element">
+                <div class="orbital-ring">
+                    <div class="planet"></div>
+                </div>
+            </div>
+
+            <!-- Sparkle effects -->
+            <div class="sparkle sparkle-1"></div>
+            <div class="sparkle sparkle-2"></div>
+            <div class="sparkle sparkle-3"></div>
+
+            <!-- Curved wave element -->
+            <div class="wave-element"></div>
+
+            <div class="absolute top-24 left-16 text-cyan-400 text-sm uppercase tracking-widest float skill-badge" style="animation-delay:0s; border-left: 3px solid #00d2ff;">Photoshop</div>
+            <div class="absolute bottom-32 left-24 text-blue-400 text-sm uppercase tracking-widest float skill-badge" style="animation-delay:1.5s; border-left: 3px solid #3b82f6;">Illustrator</div>
+            <div class="absolute top-1/3 right-16 text-pink-400 text-sm uppercase tracking-widest float skill-badge" style="animation-delay:3s; border-left: 3px solid #ff6ec4;">Canva</div>
+            <div class="absolute bottom-40 right-32 text-purple-400 text-sm uppercase tracking-widest float skill-badge" style="animation-delay:4.5s; border-left: 3px solid #7f5cff;">Figma</div>
+
+            <div class="absolute -top-32 -left-32 w-96 h-96 bg-cyan-500/25 rounded-full blur-3xl"></div>
+            <div class="absolute top-40 -right-32 w-[28rem] h-[28rem] bg-purple-500/25 rounded-full blur-3xl"></div>
+
+            <h1 class="relative text-7xl md:text-[10rem] font-extrabold tracking-tight mb-6 name-section">
+                <span class="gradient-text" style="background: linear-gradient(120deg, #06b6d4, #a855f7, #ec4899, #06b6d4); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientMove 6s linear infinite;">Rupesh</span> <span class="gradient-text" style="background: linear-gradient(120deg, #ffd60a, #ff006e, #00f5ff, #ffd60a); background-size: 300% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradientMove 6s linear infinite;">Ravu</span>
+            </h1>
+
+            <h2 class="relative text-2xl md:text-3xl text-gray-300 mb-4">
+                Graphic Designer <span class="text-grado y-500">&</span> Visual Storyteller
+            </h2>
+
+            <p class="relative text-gray-400 text-lg max-w-3xl leading-relaxed mb-12">
+                Designing experiences, not just visuals. I transform ideas into memorable brand stories.
+            </p>
+
+            <div class="relative flex gap-8 flex-wrap justify-center md:justify-start">
+                <button onclick="showWork()" class="hero-btn-primary px-10 py-4 rounded-full text-black font-semibold tracking-wide transition relative group overflow-hidden">
+                    <span class="relative z-10">View My Journey</span>
+                </button>
+                <button onclick="showContact()" class="hero-btn-secondary px-10 py-4 rounded-full text-white font-semibold tracking-wide transition relative group overflow-hidden">
+                    <span class="relative z-10">Let's Talk</span>
+                </button>
+            </div>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-32">
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-cyan-400 font-bold mb-2">Photoshop</h5>
+                <div class="w-full bg-gray-800 h-1 rounded-full"><div class="bg-cyan-400 h-1 rounded-full w-[95%]"></div></div>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-purple-400 font-bold mb-2">Illustrator</h5>
+                <div class="w-full bg-gray-800 h-1 rounded-full"><div class="bg-purple-400 h-1 rounded-full w-[70%]"></div></div>
+            </div>
+
+             <div class="glass p-6 rounded-2xl">
+                <h5 class="text-purple-400 font-bold mb-2">Canva</h5>
+                <div class="w-full bg-gray-800 h-1 rounded-full"><div class="bg-purple-400 h-1 rounded-full w-[100%]"></div></div>
+            </div>
+
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-pink-400 font-bold mb-2">UI/UX</h5>
+                <div class="w-full bg-gray-800 h-1 rounded-full"><div class="bg-pink-400 h-1 rounded-full w-[50%]"></div></div>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-yellow-400 font-bold mb-2">Branding</h5>
+                <div class="w-full bg-gray-800 h-1 rounded-full"><div class="bg-yellow-400 h-1 rounded-full w-[85%]"></div></div>
+            </div>
+        </section>
+    </main>
+
+   
+        
+        
+        <section id="work-content" class="hidden-section mb-32 pt-10">
+        
+        <div class="glass p-8 rounded-2xl mb-8 w-full max-w-none min-h-[30vh]">
+            <h4 class="text-3xl font-bold mb-4">About me</h4>
+            <p class="text-gray-300 text-lg leading-relaxed">I am Rupesh Ravu, a creative and detail-oriented Graphic Designer skilled in Adobe Photoshop, Adobe Illustrator, and Canva. I have a strong understanding of color theory, typography, and layout design, which enables me to create visually appealing and impactful designs. I am passionate about visual storytelling and continuously work on improving my design skills to deliver high-quality graphics that effectively communicate ideas and strengthen brand identity.</p>
+        </div>
+
+        <div class="p-4 mb-8 w-full">
+            <h4 class="text-lg font-bold mb-3">Languages</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-cyan-400 bg-opacity-20 text-cyan-300 rounded-lg text-sm border border-cyan-400 border-opacity-50">English</span>
+                <span class="px-3 py-1 bg-purple-400 bg-opacity-20 text-purple-300 rounded-lg text-sm border border-purple-400 border-opacity-50">Telugu</span>
+            </div>
+        </div>
+
+        <h3 class="text-4xl font-bold mb-8 flex items-center gap-4">
+            <span class="text-cyan-400 font-mono text-sm"></span> Skills
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-xl font-bold text-cyan-400 mb-2">Photoshop</h5>
+                <p class="text-gray-300">Professional expertise in advanced photo editing, design composition, and digital art creation.</p>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-xl font-bold text-purple-400 mb-2">Adobe Illustrator</h5>
+                <p class="text-gray-300">Specializing in vector graphics, logo design, and scalable illustration creation.</p>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h5 class="text-xl font-bold text-pink-400 mb-2">Canva</h5>
+                <p class="text-gray-300">Quick and efficient design creation for social media, presentations, and marketing materials.</p>
+            </div>
+        </div>
+
+        <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <span class="text-cyan-400 font-mono text-sm"></span> Experience
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="glass p-6 rounded-2xl">
+                <div class="space-y-6">
+                    <div class="relative pl-8 border-l border-gray-800">
+                        <div class="absolute -left-[6px] top-2 w-3 h-3 bg-cyan-400 rounded-full" style="box-shadow: 0 0 10px #06b6d4;"></div>
+                        <span class="text-cyan-400 font-mono font-bold text-lg px-3 py-1 bg-cyan-400 bg-opacity-20 rounded-lg inline-block border border-cyan-400 border-opacity-50" style="box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);">⭐ 2 Years</span>
+                        <h4 class="text-2xl font-bold mt-2 text-white">Graphic Designing</h4>
+                        <p class="text-gray-300 mt-2">Dedicated professional experience in creating compelling visual content, brand identities, and digital designs across multiple platforms and industries.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 bg-cyan-400 bg-opacity-20 text-cyan-300 rounded-full text-sm border border-cyan-400 border-opacity-50">Logo Design</span>
+                            <span class="px-3 py-1 bg-purple-400 bg-opacity-20 text-purple-300 rounded-full text-sm border border-purple-400 border-opacity-50">Poster & Banner Design</span>
+                            <span class="px-3 py-1 bg-pink-400 bg-opacity-20 text-pink-300 rounded-full text-sm border border-pink-400 border-opacity-50">Social Media Creatives</span>
+                            <span class="px-3 py-1 bg-orange-400 bg-opacity-20 text-orange-300 rounded-full text-sm border border-orange-400 border-opacity-50">Photo Retouching</span>
+                            <span class="px-3 py-1 bg-blue-400 bg-opacity-20 text-blue-300 rounded-full text-sm border border-blue-400 border-opacity-50">Typography</span>
+                            <span class="px-3 py-1 bg-yellow-400 bg-opacity-20 text-yellow-300 rounded-full text-sm border border-yellow-400 border-opacity-50">Color Theory</span>
+                            <span class="px-3 py-1 bg-green-400 bg-opacity-20 text-green-300 rounded-full text-sm border border-green-400 border-opacity-50">Basic UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="md:col-span-1">
+                <h3 class="text-4xl font-bold mb-6 flex items-center gap-4">
+                    <span class="text-cyan-400 font-mono text-sm"></span> Projects
+                </h3>
+                <div class="glass p-6 rounded-2xl">
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">•</span>
+                            <span>Designed posters and creatives for university events.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">•</span>
+                            <span>Created social media graphics using Photoshop and Canva.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">•</span>
+                            <span>Developed logos, branding elements, and templates.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-cyan-400 mr-3 mt-1">•</span>
+                            <span>Performed photo retouching and image enhancement</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <span class="text-cyan-400 font-mono text-sm"></span> Education
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2">
+                <div class="space-y-8">
+                    <div class="relative pl-8 border-l border-gray-800">
+                        <div class="absolute -left-[6px] top-2 timeline-dot"></div>
+                        <span class="text-cyan-400 font-mono text-sm">2024 - Present</span>
+                        <h4 class="text-2xl font-bold mt-1">KL University</h4>
+                        <p class="text-gray-300">B.Tech in Computer Science & IT</p>
+                        <p class="text-gray-500 text-sm mt-2 italic">Focusing on the intersection of technology and user-centric design.</p>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-gray-800">
+                        <div class="absolute -left-[6px] top-2 timeline-dot"></div>
+                        <span class="text-purple-400 font-mono text-sm">2022 - 2024</span>
+                        <h4 class="text-2xl font-bold mt-1">Sri Chaitanya Institutions</h4>
+                        <p class="text-gray-300 font-medium">Advanced Secondary Education (11th - 12th)</p>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-gray-800">
+                        <div class="absolute -left-[6px] top-2 timeline-dot" style="background: #9d50bb; box-shadow: 0 0 10px #9d50bb;"></div>
+                        <span class="text-purple-400 font-mono text-sm">2013 - 2022</span>
+                        <h4 class="text-2xl font-bold mt-1">Vishwasanthi School</h4>
+                        <p class="text-gray-300 font-medium">Secondary Education</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="md:col-span-1">
+                <h3 class="text-4xl font-bold mb-12 flex items-center gap-4">
+            <span class="text-cyan-400 font-mono text-sm"></span> Location
+        </h3>
+                <div class="glass p-6 rounded-2xl mb-8">
+                    <p class="text-gray-300">India<br>Andhra Pradesh<br>Surepalli, 522256<br>1-25, Rice Mill Street</p>
+                </div>
+            </aside>
+        </div>
+        
+    </section>
+
+    <section id="about-content" class="hidden-section mb-32 pt-10">
+        <div class="classic-label p-6 rounded-2xl mb-6">
+            <h3 class="text-4xl font-bold mb-0 flex items-center gap-4">
+                <span class="text-cyan-400 font-mono text-sm"></span> Selected Work
+            </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-xl font-bold mb-2">Brand Identity — Aurora Studio</h4>
+                <p class="text-gray-300 text-sm">Logo, color system, and brand guidelines for a boutique studio.</p>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <h4 class="text-xl font-bold mb-2">Poster Series — Urban Beats</h4>
+                <p class="text-gray-300 text-sm">Promotional poster designs and event collateral.</p>
+            </div>
+        </div>
+
+        <!-- Design frames: replace placeholder text with <img> tags or link your images -->
+        <div class="design-grid max-w-6xl mx-auto mt-2">
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="SAMYAK.jpg" alt="Aurora Studio" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="pizza%20post.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Mocktails.jpg" alt="Urban Beats" />
+            </div>
+
+             <div class="design-frame glass rounded-2xl p-0">
+                <img src="Dhanvi%20sreemayi.jpg" alt="Aurora Studio" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="2.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="1%20day%20to%20go.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Media%20.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Kuchipudi.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Flashmob%20%282%29.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Ganesh%20Chathurthi.jpg" alt="Urban Beats" />
+            </div>
+
+            <div class="design-frame glass rounded-2xl p-0">
+                <img src="Dussehra.jpg" alt="Urban Beats" />
+            </div>
+
+
+           
+        </div>
+        
+    </section>
+
+    <section id="certifications-content" class="hidden-section mb-32 pt-10">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 flex items-center gap-3">
+                <span class="inline-block text-5xl animate-bounce" style="animation: bounce 2s infinite; color: #06b6d4;">✓</span>
+                Verified Certifications
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass p-0 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="Coursera%20J3BHBLX7FPQH_page-0001.jpg" alt="Coursera Certificate" class="w-full h-auto" />
+                </div>
+                <div class="glass p-0 rounded-2xl overflow-hidden hover:shadow-xl transition duration-300">
+                    <img src="Coursera%206HADT8K2AYRA_page-0001.jpg" alt="Coursera Certificate" class="w-full h-auto" />
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="contact-content" class="hidden-section mb-32 pt-10 relative">
+        <div class="absolute inset-0 backdrop-blur-lg pointer-events-none rounded-3xl"></div>
+        <div class="glass p-8 rounded-2xl mb-8 w-full max-w-none backdrop-blur-md relative z-10">
+            <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-gray-300 text-lg leading-relaxed mb-12">Let's collaborate and create something amazing together. Feel free to reach out through any of the following channels.</p>
+            
+            <!-- Contact Details -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Instagram -->
+                <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition duration-300 backdrop-blur-lg">
+                    <i class="fab fa-instagram text-pink-500 text-5xl mb-4 block"></i>
+                    <h3 class="text-xl font-bold text-pink-500 mb-2">Instagram</h3>
+                    <a href="https://instagram.com/rupeshravu" target="_blank" class="text-gray-300 hover:text-pink-400 transition text-lg">@rupeshravu</a>
+                </div>
+                
+                <!-- Phone -->
+                <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition duration-300 backdrop-blur-lg">
+                    <i class="fas fa-phone text-green-500 text-5xl mb-4 block"></i>
+                    <h3 class="text-xl font-bold text-green-500 mb-2">Phone</h3>
+                    <a href="https://wa.me/919502515671" target="_blank" class="text-gray-300 hover:text-green-400 transition text-lg">+91 9502515671</a>
+                </div>
+                
+                <!-- Email -->
+                <div class="glass p-8 rounded-2xl text-center hover:scale-105 transition duration-300 backdrop-blur-lg">
+                    <i class="fas fa-envelope text-red-500 text-5xl mb-4 block"></i>
+                    <h3 class="text-xl font-bold text-red-500 mb-2">Email</h3>
+                    <a href="mailto:rupeshravu@gmail.com" class="text-gray-300 hover:text-red-400 transition text-lg">rupeshravu@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="text-center py-10">
+        <p class="text-gray-500 text-sm">© 2026 Rupesh Ravu. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateBackButton(isHome) {
+            const backBtn = document.getElementById('back-btn');
+            if (isHome) {
+                backBtn.classList.add('hidden');
+            } else {
+                backBtn.classList.remove('hidden');
+            }
+        }
+
+        function showAbout() {
+            document.getElementById('home-content').classList.add('hidden-section');
+            if (document.getElementById('work-content')) document.getElementById('work-content').classList.add('hidden-section');
+            if (document.getElementById('contact-content')) document.getElementById('contact-content').classList.add('hidden-section');
+            if (document.getElementById('certifications-content')) document.getElementById('certifications-content').classList.add('hidden-section');
+            document.getElementById('about-content').classList.remove('hidden-section');
+            document.getElementById('about-content').classList.add('fade-in');
+            updateBackButton(false);
+            window.scrollTo(0, 0);
+        }
+
+        function showHome() {
+            if (document.getElementById('about-content')) document.getElementById('about-content').classList.add('hidden-section');
+            if (document.getElementById('work-content')) document.getElementById('work-content').classList.add('hidden-section');
+            if (document.getElementById('contact-content')) document.getElementById('contact-content').classList.add('hidden-section');
+            if (document.getElementById('certifications-content')) document.getElementById('certifications-content').classList.add('hidden-section');
+            document.getElementById('home-content').classList.remove('hidden-section');
+            document.getElementById('home-content').classList.add('fade-in');
+            updateBackButton(true);
+            window.scrollTo(0, 0);
+        }
+
+        function showWork() {
+            document.getElementById('home-content').classList.add('hidden-section');
+            if (document.getElementById('about-content')) document.getElementById('about-content').classList.add('hidden-section');
+            if (document.getElementById('contact-content')) document.getElementById('contact-content').classList.add('hidden-section');
+            if (document.getElementById('certifications-content')) document.getElementById('certifications-content').classList.add('hidden-section');
+            document.getElementById('work-content').classList.remove('hidden-section');
+            document.getElementById('work-content').classList.add('fade-in');
+            updateBackButton(false);
+            window.scrollTo(0, 0);
+        }
+
+        function showContact() {
+            document.getElementById('home-content').classList.add('hidden-section');
+            if (document.getElementById('about-content')) document.getElementById('about-content').classList.add('hidden-section');
+            if (document.getElementById('work-content')) document.getElementById('work-content').classList.add('hidden-section');
+            if (document.getElementById('certifications-content')) document.getElementById('certifications-content').classList.add('hidden-section');
+            document.getElementById('contact-content').classList.remove('hidden-section');
+            document.getElementById('contact-content').classList.add('fade-in');
+            updateBackButton(false);
+            window.scrollTo(0, 0);
+        }
+
+        function showCertifications() {
+            document.getElementById('home-content').classList.add('hidden-section');
+            if (document.getElementById('about-content')) document.getElementById('about-content').classList.add('hidden-section');
+            if (document.getElementById('work-content')) document.getElementById('work-content').classList.add('hidden-section');
+            if (document.getElementById('contact-content')) document.getElementById('contact-content').classList.add('hidden-section');
+            document.getElementById('certifications-content').classList.remove('hidden-section');
+            document.getElementById('certifications-content').classList.add('fade-in');
+            updateBackButton(false);
+            window.scrollTo(0, 0);
+        }
+
+        
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+    <style>
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-slide-down {
+            animation: slideDown 0.3s ease-out;
+        }
+        /* Classic clean label styling for About heading */
+        .classic-label {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+            backdrop-filter: blur(4px);
+        }
+    </style>
+
+</body>
+</html>
